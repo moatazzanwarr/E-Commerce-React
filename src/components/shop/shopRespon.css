@@ -1,0 +1,29 @@
+@media (max-width:1024px){
+    /* .shop > .mainContent {
+        flex-direction: column;
+    } */
+    .shop > .mainContent > aside {
+        width: 40%;
+    }
+    .shop > .mainContent > .container{
+        width: 60%;
+      }
+    .shop > .mainImg > .right > div {
+        font-size: 12px !important;
+        gap: 1px !important;
+    }
+    .shop > .mainImg > .right > div > .i {
+        font-size: 14px !important;
+    }
+}
+@media (max-width:700px){
+    .shop > .mainContent > aside{
+        display: none !important;
+    }
+    .shop > .mainContent > .container > .bar >.mobileFilter{
+        display: block !important;
+      }
+      .shop > .mainContent > .container {
+        width: 100% !important;
+    }
+}

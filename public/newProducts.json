@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "src": "images/product-1.png",
+        "title": "Beetroot",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Harvest Foods",
+        "price": 3.84,
+        "discount": 40.95
+    },
+    {
+        "id": 2,
+        "src": "images/product-2.png",
+        "title": "Mushroom",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Organic Valley",
+        "price": 16.16,
+        "discount": 34.32
+    },
+    {
+        "id": 3,
+        "src": "images/product-3.png",
+        "title": "Celery",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Healthy Harvest",
+        "price": 5.69,
+        "discount": 43.4
+    },
+    {
+        "id": 4,
+        "src": "images/product-4.png",
+        "title": "Beetroot",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Harvest Foods",
+        "price": 4.36,
+        "discount": 44.0
+    },
+    {
+        "id": 5,
+        "src": "images/product-5.png",
+        "title": "Cabbage",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Pure Produce",
+        "price": 17.55,
+        "discount": 39.34
+    },
+    {
+        "id": 6,
+        "src": "images/product-6.png",
+        "title": "Taro",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Earth's Bounty",
+        "price": 2.13,
+        "discount": 14.44
+    },
+    {
+        "id": 7,
+        "src": "images/product-7.png",
+        "title": "Horseradish",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Organic Valley",
+        "price": 6.55,
+        "discount": 29.02
+    },
+    {
+        "id": 8,
+        "src": "images/product-8.png",
+        "title": "Scallion",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Fresh Farms",
+        "price": 5.8,
+        "discount": 33.03
+    },
+    {
+        "id": 9,
+        "src": "images/product-9.png",
+        "title": "Jicama",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Fresh Farms",
+        "price": 3.75,
+        "discount": 34.0
+    },
+    {
+        "id": 10,
+        "src": "images/product-10.png",
+        "title": "Taro",
+        "rate": 3.5,
+        "type": "Fresh Vegetable",
+        "company": "Green Leaf",
+        "price": 3.46,
+        "discount": 30.83
+    }
+]

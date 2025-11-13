@@ -1,0 +1,66 @@
+@media (max-width:1024px){
+    .contact {
+        width: 90% !important;
+    }
+    
+    .contactHelp {
+        width: 90% !important;
+    }
+    .contactHelp>.container {
+        flex-wrap: wrap;
+    }
+    .contactHelp>.container>div:first-child>h2 {
+        font-size: 35px !important;
+    }
+
+    .contact .addresses {
+        width: 90% !important;
+    }
+}
+
+@media (max-width:900px){
+    .contactForm {
+        width: 100% !important;
+    }
+    .contactForm>h4 {
+        height: 40px !important;
+    }
+    .contactForm>.container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .contactForm>.container .right {
+        width: 100% !important;
+    }
+    .contactForm>.container .left {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:700px){
+    .contact .addresses {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
+
+    .contactForm>.container .left>h2 {
+        font-size: 35px !important;
+    }
+}
+
+@media (max-width:500px){
+    .contactHelp>.container>div:last-child {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .contact .addresses {
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+
+    .contactForm>.container .left>form>div {
+        flex-wrap: wrap;
+
+    }
+    .contactForm>.container .left>form>div>div {
+        width: 100% !important;
+    }
+}

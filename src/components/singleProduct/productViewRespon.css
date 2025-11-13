@@ -1,0 +1,35 @@
+@media (max-width:1024px){
+    .productView {
+        width: 90% !important;
+    }
+    .productView>.container {
+        margin: 0 !important;
+    }
+}
+@media (max-width:900px){
+    .productView>.container>.main .singleProduct>.text>.control>.addTo{
+        font-size: 14px !important;
+    }
+    .productView>.container>.main .singleProduct>.text>.control>.addTo>.i{
+        font-size: 17px !important;
+    }
+    .productView>.container>.main .productInfo>.bar {
+        height: fit-content;
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+    }
+}
+@media (max-width:700px){
+    .productView>.container>.main .singleProduct {
+        flex-direction: column !important;
+        gap: 24px !important;
+    }
+    .productView>.container>.main .singleProduct>.images {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+    .productView>.container>.main .singleProduct>.text {
+        width: 100%;
+        margin: 0 !important;
+    }
+}

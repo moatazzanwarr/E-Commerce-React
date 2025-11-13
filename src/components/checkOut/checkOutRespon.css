@@ -1,0 +1,84 @@
+@media (max-width:1024px){
+    .checkOut>.container>.container-2 {
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+    .checkOut>.container>.container-2>.left{
+        width: 100% !important;
+    }
+
+
+    .checkOut>.container>.container-2>.right{
+        width: 100% !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div:first-child>a {
+        display: block;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child{
+        height: 60px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div{
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div:first-child{
+        padding-left: 10px;
+    }
+}
+
+@media (max-width:700px){
+    .checkOut>.container>.container-2>.left>div:first-child {
+        flex-direction: column !important;
+        height: fit-content !important;
+        gap: 10px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div {
+        width: 60% !important;
+    }
+}
+
+@media (max-width:500px){
+    .checkOut>.container>.container-2>.right {
+        padding: 10px !important;
+    }
+    .checkOut>.container>.container-2>.right>.product>.title {
+        display: none;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div:last-child>input {
+        font-size: 16px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div:last-child>button {
+        font-size: 16px !important;
+    }
+
+
+    .checkOut>.container>.container-2>.left>div:first-child>div:last-child{
+        height: 40px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:first-child>div {
+        width: 100% !important;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div {
+        flex-direction: column !important;
+        height: fit-content !important;
+        align-items: flex-start;
+        gap: 10px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div>input[type="text"] {
+        width: 100% !important;
+        height: 45px;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div>select {
+        width: 100% !important;
+        height: 45px;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div>textarea {
+        height: 150px !important;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div:nth-child(7){
+        flex-direction: row !important;
+    }
+    .checkOut>.container>.container-2>.left>div:last-child>form>div:last-child{
+        flex-direction: row !important;
+    }
+}

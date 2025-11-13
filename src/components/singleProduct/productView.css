@@ -1,0 +1,316 @@
+.productView{
+    width: 85%;
+    margin: 0 auto;
+}
+
+.productView .bar{
+    height: 60px;
+}
+.productView .bar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.productView .bar ul li a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #7E7E7E;
+}
+.productView .bar ul li:first-child a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #3BB77E;
+}
+
+.productView .bar ul>.i{
+    font-size: 14px;
+    color: #7E7E7E;
+}
+
+.productView>.container{
+    margin: 0 5% 0 5%;
+}
+.productView>.container>.main{
+    min-height: 400px;
+}
+.productView>.container>.main .singleProduct{
+    display: flex;
+}
+.productView>.container>.main .singleProduct>.images{
+    width: 45%;
+    margin: 0 2.5%;
+}
+.productView>.container>.main .singleProduct>.images>.mainImg{
+    width: 100%;
+    height: fit-content;
+}
+.productView>.container>.main .singleProduct>.images>.mainImg>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productView>.container>.main .singleProduct>.images>.selection{
+    width: 100%;
+    height: 118px;
+    display: flex;
+    justify-content: space-between;
+}
+.productView>.container>.main .singleProduct>.images>.selection>.img{
+    width: 120px;
+    height: 120px;
+}
+.productView>.container>.main .singleProduct>.images>.selection>.img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: green;
+}
+.productView>.container>.main .singleProduct>.text{
+    width: 45%;
+    margin: 0 2.5%;
+}
+.productView>.container>.main .singleProduct>.text>h5{
+    font-size: 14px;
+    color: #F74B81;
+    height: 39px;
+    width: 80px;
+    background: #FDE0E9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.productView>.container>.main .singleProduct>.text>h1{
+    font-size: 25px;
+    color: #253D4E;
+    height: 95px;
+    width: 80%;
+}
+.productView>.container>.main .singleProduct>.text>.reviews{
+    font-size: 14px;
+    color: #B6B6B6;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.productView>.container>.main .singleProduct>.text>.reviews>.i{
+    font-size: 20px;
+    color: gold;
+}
+
+.productView>.container>.main .singleProduct>.text>.price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    color: gold;
+    margin-bottom: 20px;
+}
+.productView>.container>.main .singleProduct>.text>.price>span{
+    font-size: 50px;
+    font-weight: bold;
+    color: #3BB77E;
+}
+.productView>.container>.main .singleProduct>.text>.price>div>p{
+    font-size: 14px;
+    font-weight: bold;
+    color: #FDC040;
+}
+.productView>.container>.main .singleProduct>.text>.price>div>span{
+    font-size: 28px;
+    font-weight: bold;
+    color: #B6B6B6;
+}
+.productView>.container>.main .singleProduct>.text>.info{
+    width: 100%;
+    height: 100px;
+    color: #7E7E7E;
+    font-size: 17px;
+}
+.productView>.container>.main .singleProduct>.text>.size{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+.productView>.container>.main .singleProduct>.text>.size>p{
+    font-size: 14px;
+    color: #7E7E7E;
+}
+.productView>.container>.main .singleProduct>.text>.size>.selection{
+    display: flex;
+    gap: 2px;
+}
+.productView>.container>.main .singleProduct>.text>.size>.selection>button{
+    font-size: 14px;
+    color: #7E7E7E;
+    height: 30px;
+    width: 40px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent;
+}
+.productView>.container>.main .singleProduct>.text>.size>.selection>button:hover{
+    transition: .2s ease;
+    background: #3BB77E;
+    color: #FFF;
+}
+.productView>.container>.main .singleProduct>.text>.control{
+    display: flex;
+    justify-content: space-between;
+}
+.productView>.container>.main .singleProduct>.text>.control>.counter{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+    border: 1px solid #3BB77E;
+    height: 50px;
+    width: 18.36%;
+    border-radius: 5px;
+
+}
+.productView>.container>.main .singleProduct>.text>.control>.counter>span{
+    color: #000;
+    font-size: 16px;
+}
+.productView>.container>.main .singleProduct>.text>.control>.counter>div>div>span{
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+    color: #3BB77E;
+}
+.productView>.container>.main .singleProduct>.text>.control>.addTo{
+    font-size: 16px;
+    background: #3BB77E;
+    outline: none;
+    border: none;
+    color: #FFF;
+    height: 50px;
+    width: 32.65%;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.productView>.container>.main .singleProduct>.text>.control>.addTo:hover{
+    opacity: .9;
+    transition: .2s ease;
+}
+.productView>.container>.main .singleProduct>.text>.control>.wishlist{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.productView>.container>.main .singleProduct>.text>.control>.wishlist>.i{
+    color: #333333;
+}
+.productView>.container>.main .singleProduct>.text>.control>.wishlist>.i:hover{
+    color: #3BB77E;
+    transition: .2s ease;
+}
+.productView>.container>.main .singleProduct>.text>.control>button:last-child{
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.productView>.container>.main .singleProduct>.text>.control>button:last-child>.i{
+    color: #333333;
+}
+.productView>.container>.main .singleProduct>.text>.control>button:last-child>.i:hover{
+    color: #3BB77E;
+    transition: .2s ease;
+}
+
+.productView>.container>.main .productInfo{
+    margin-top: 40px;
+    min-height: 500px;
+}
+.productView>.container>.main .productInfo>.bar{
+    height: 100px;
+    display: flex;
+    gap: 10px;
+}
+.productView>.container>.main .productInfo>.bar>button{
+    height: 45px;
+    width: 145px;
+    outline: none;
+    background: #fff;
+    border: 1px solid #ECECEC;
+    border-radius: 30px;
+    color: #7E7E7E;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.productView>.container>.main .productInfo>.bar>button:hover{   
+    color: #3BB77E;
+    transition: .2s ease;
+}
+.productView>.container>.main .productInfo>p{
+    font-size: 17px;   
+    color: #7E7E7E;
+}
+.productView>.container>.main .productInfo>p:nth-child(2) {
+    margin-bottom: 25px;
+}
+.productView>.container>.main .productInfo>p:nth-child(3){
+    margin-bottom: 25px;
+}
+.productView>.container>.main .productInfo>.lists{
+    padding-bottom: 30px;
+    border-bottom: 1px solid #7E7E7E;
+}
+.productView>.container>.main .productInfo>.lists:nth-child(4){
+    display: flex;
+}
+.productView>.container>.main .productInfo>.lists:nth-child(4)>ul{
+    width: 45%;
+    margin: 0 2.5%;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7E7E7E;
+}
+.productView>.container>.main .productInfo>.lists:nth-child(4)>ul>li{
+    height: 30px;
+}
+.productView>.container>.main .productInfo>.lists:nth-child(4)>ul:last-child{
+    list-style: none;
+}
+
+.productView>.container>.main .productInfo>p:nth-child(5){
+    height: fit-content;
+    font-size: 16px;
+    color: #7E7E7E;
+    padding-top: 20px;
+}
+.productView>.container>.main .mainTitles{
+    height: 25px;
+    font-size: 24px;
+    color: #253D4E;
+    margin: 30px 0 15px 0;
+}
+.productView>.container>.main .productInfo>div:nth-child(6)>p{
+    font-size: 16px;
+    color: #7E7E7E;
+}
+.productView>.container>.main .productInfo>div:nth-child(6)>p:nth-child(2){
+    height: fit-content;
+    margin-bottom: 24px;
+}
+
+

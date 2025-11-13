@@ -1,0 +1,112 @@
+.daels{
+
+}
+
+.deals .bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.deals>.bar>h1{
+    color: #253D4E;
+    font-size: 32px;
+}
+.deals>.bar>a{
+    color: #7E7E7E;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+.deals>.bar>a:hover{
+    color: #3BB77E;
+    transition: .2s ease;
+}
+.deals>.bar>a>.i{
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.deals>div:last-child{
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-bottom: 50px;
+    grid-gap: 24px;
+}
+
+.deals .deals-card .img img{
+    width: 100%;
+}
+
+.deals .deals-card>.text{
+    background-color: #FFF;
+    width: 90%;
+    margin: -50px auto 0 auto;
+    padding: 20px;
+    position: relative;
+    border-radius: 7px;
+}
+
+.deals .deals-card>.text h4{
+    color: #253D4E;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.deals .deals-card>.text>.rate{
+    color: #B6B6B6;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.deals .deals-card>.text>.rate>span{
+    color: gold;
+    margin-right: 20px;
+}
+
+.deals .deals-card>.text>.company{
+    color: #3BB77E;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+.deals .deals-card>.text>.company>span{
+    color: #B6B6B6;
+}
+.deals .deals-card>.text>.price-add{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.deals .deals-card>.text>.price-add>.price{
+    color: #3BB77E;
+}
+.deals .deals-card>.text>.price-add>.price>span:first-child{
+    margin-right: 10px;
+    font-size: 18px;
+}
+.deals .deals-card>.text>.price-add>.price>span:last-child{
+    font-size: 14px;
+    color: #ADADAD;
+    text-decoration: line-through;
+}
+
+.deals .deals-card>.text>.price-add>.add{
+    display: flex;
+    align-items: center;
+    color: #3BB77E;
+    padding: 7px 12px;
+    background: #DEF9EC;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.deals .deals-card>.text>.price-add>.add .i{
+    font-size: 18px;
+}
+.deals .deals-card>.text>.price-add>.add:hover{
+    opacity: .9;
+    transition: .2s ease;
+}
+
+

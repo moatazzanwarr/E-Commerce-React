@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Quicksand;
+}
+
+.headerInMobile{
+  display: none;
+}
+.headerInPC{
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .headerInMobile{
+    display: block !important;
+  }
+  .headerInPC{
+    display: none !important;
+  }
+}

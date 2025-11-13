@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "title": "Best Prices & Offers",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    },
+    {
+        "id": 2,
+        "title": "Wide Assortment",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    },
+    {
+        "id": 3,
+        "title": "Free Delivery",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    },
+    {
+        "id": 4,
+        "title": "Easy Returns",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    },
+    {
+        "id": 5,
+        "title": "100% Satisfaction",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    },
+    {
+        "id": 6,
+        "title": "Great Daily Deal",
+        "info": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form",
+        "to": "#"
+    }
+]

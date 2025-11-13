@@ -1,0 +1,159 @@
+@media (max-width:1024px){
+    .welcomeToNest{
+        width: 90% !important;
+    }
+    .welcomeToNest>.img{
+        width: 100% !important;
+    }
+    .welcomeToNest .right{
+        margin-top: 30px !important;
+        width: 190% !important;
+    }
+
+    .whatWeProvide {
+        width: 90% !important;
+    }
+
+    .ourPerformance {
+        width: 90% !important;
+    }
+
+
+    .about>.counters>.text>div>h1 {
+        font-size: 55px !important;
+    }
+    .about>.counters>.text>div>h4 {
+        font-size: 20px !important;
+    }
+
+    .ourTeam {
+        width: 90% !important;
+        border: 1px solid red;
+    }
+
+    .ourTeam>.container>.cards>.OurTeamCard {
+        width: 45%;
+        margin: 0 2.5%;
+    }
+    .ourTeam>.container>.cards .OurTeamCard>.text {
+        width: 90% !important;
+    }
+    .ourTeam>.container>.cards .OurTeamCard>.text>h3 {
+        font-size: 18px !important;
+    }
+    .ourTeam>.container>.cards .OurTeamCard>.text>h5 {
+        font-size: 14px !important;
+    }
+    .ourTeam>.container>.cards .social {
+        gap: 8px;
+        flex-wrap: wrap;
+        width: 100% !important;
+    }
+}
+
+@media (max-width:900px){
+    .whatWeProvide>.services {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .ourPerformance>.top>.text>h5 {
+        font-size: 18px !important;
+    }
+    .ourPerformance>.top>.text>h2 {
+        font-size: 25px !important;
+    }
+    .ourPerformance>.top>.text>p {
+        font-size: 14px !important;
+    }
+    .ourPerformance>.bottom {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    .ourPerformance>.bottom>div>h3 {
+        font-size: 25px !important;
+        margin-bottom: 15px;
+    }
+    .ourPerformance>.bottom>div>p {
+        font-size: 14px !important;
+    }
+
+    .about>.counters>.text>div>h1 {
+        font-size: 35px !important;
+    }
+    .about>.counters>.text>div>h4 {
+        font-size: 16px !important;
+    }
+
+    .ourTeam > .container {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .ourTeam > .container > .cards {
+        width: 100% !important;
+    }
+    .ourTeam > .container > .text {
+        width: 100% !important;
+    }
+}
+
+@media (max-width:700px){
+
+    .welcomeToNest .right .text h2 {
+        font-size: 30px !important;
+    }
+
+
+    .about .mainTitle {
+        font-size: 30px;
+        color: #253D4E;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .ourPerformance>.top {
+        flex-wrap: wrap !important;
+    }
+    .ourPerformance>.top>.img {
+        width: 100% !important;
+    }
+    .ourPerformance>.top>.text {
+        width: 100% !important;
+    }
+
+
+    .about>.counters{
+        display: none !important;
+    }
+
+
+    .ourTeam{
+        margin-top: 50px !important;
+    }
+    .ourTeam > .container > .text > h2 {
+        font-size: 30px !important;
+    }
+    .ourTeam > .container > .cards {
+        flex-wrap: wrap;
+        gap: 24px !important;
+    }
+    .ourTeam > .container > .cards > .OurTeamCard {
+        width: 100% !important;
+    }
+    .ourTeam > .container > .cards .social {
+        width: fit-content !important;
+        margin: auto;
+    }
+}
+
+@media (max-width:500px){
+    .welcomeToNest{
+        width: 100% !important;
+    }
+
+    .whatWeProvide>.services {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .ourPerformance>.bottom {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}

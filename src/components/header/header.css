@@ -1,0 +1,300 @@
+header{
+    overflow: hidden;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+}
+
+header li{
+    margin-right: 20px;
+}
+header a{
+    text-decoration: none;
+    color: #7E7E7E;
+    font-size: 13px;
+}
+
+a{
+    text-decoration: none;
+}
+/*  */
+
+header>.top{
+    width: 85%;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .top .center{
+    font-size: 14px;
+    color: #7E7E7E;
+}
+
+header .top .right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+header .top .right p{
+    font-size: 13px;
+    color: #7E7E7E;
+}
+
+header .top .right p>span{
+    color: #3BB77E;
+}
+
+header .top .right select{
+    outline: none;
+    border: none;
+    color: #7E7E7E;
+    font-size: 13px;
+}
+
+select{
+    cursor: pointer;
+}
+
+/* Header Bottom */
+
+header .bottom{
+    width: 85%;
+    margin: 40px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+header select{
+    outline: none;
+    border: none;
+    color: #253D4E;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+header .bottom .center{
+    padding: 15px;
+    border: 2px solid #BCE3C9;
+    border-radius: 3px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+header .bottom .center input{
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: #7E7E7E;
+    width: 100%;
+    padding-left: 15px;
+}
+
+header .bottom .center button{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    background: #fff;
+    cursor: pointer;
+}
+
+header .bottom .center button .i{
+    font-size: 30px;
+    color: #7E7E7E;
+}
+
+/* Header Right */
+header .bottom .right>div:first-child {
+    width: 80px;
+    display: flex;
+}
+header .bottom .right>div:first-child .i{
+    color: #B6B6B6;
+    font-size: 25px;
+}
+header .bottom .right>div:first-child select{
+    color: #3BB77E;
+    font-size: 14px;
+}
+
+header .bottom .right{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .bottom .right>ul{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+header .bottom .right>ul>li{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+header .bottom .right>ul>li>a{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+header .bottom .right>ul>.cart{
+    position: relative;
+}
+header .bottom .right>ul .cartCounter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background: #3BB77E;
+    color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+}
+
+header .bottom .right>ul>li>.i,header .bottom .right>ul>li>a>.i{
+    color: #253D4E;
+    font-size: 25px;
+    position: relative;
+}
+
+header .bottom .right>ul>li>.i::after{
+    content: "3";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3BB77E;
+    position: absolute;
+    right: -13px;
+    top: -13px;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+}
+
+header .bottom .right>ul>li>span{
+    font-size: 14px;
+    color: #7E7E7E;
+}
+
+/* //////////////// */
+
+header .pages{
+    width: 85%;
+    margin: 36px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+header .pages>div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .pages>div:first-child>div:first-child{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    color: #FFF;
+    background: #3BB77E;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+header .pages>div:first-child>div:first-child>div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+header .pages>div:first-child>div:first-child>select{
+    background: #3BB77E;
+    color: #FFF;
+}
+
+header .pages>div:first-child>div>select{
+    color: #253D4E;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+
+
+header .pages>div:first-child>div{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #3BB77E;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+header .pages>div:first-child>div>span{
+    color: #253D4E;
+    font-weight: bold;
+}
+
+header .pages>div:first-child>div:nth-child(3)>select{
+    background: #ffffff00;
+    color: #3BB77E;
+    font-weight: bold;
+}
+
+header .pages>div:first-child>div>a{
+    color: #253D4E;
+    font-size: 16px;
+}
+
+header .pages>div:first-child>div:nth-child(5)>select,main>section:first-child>div:first-child>div:nth-child(6)>select,main>section:first-child>div:first-child>div:nth-child(7)>select,main>section:first-child>div:first-child>div:nth-child(8)>select,main>section:first-child>div:first-child>div:nth-child(9)>select{
+    background: #ffffff00;
+    color: #253D4E;
+    font-weight: bold;
+}
+
+header .pages>div:last-child{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+header .pages>div:last-child>.i{
+    font-size: 35px;
+    color: #253D4E;
+}
+header .pages>div:last-child>div>h4{
+    font-size: 26px;
+    color: #3BB77E;
+}
+header .pages>div:last-child>div>span{
+    font-size: 12px;
+    color: #7E7E7E;
+}
+
+
+@media (max-width:1024px){
+    .headerPC{
+        display: none;
+    }
+}

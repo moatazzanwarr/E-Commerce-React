@@ -1,0 +1,72 @@
+.welcomeToNest{
+    width: 75%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.welcomeToNest>.img{
+    width: 45%;
+    margin: 0 2.5%;
+}
+
+.welcomeToNest>.img>img{
+    width: 100%;
+}
+
+.welcomeToNest .right{
+    overflow: hidden;
+    width: 45%;
+    margin: 0 2.5%;
+}
+.welcomeToNest .right .text h2{
+    font-size: 40px;
+    color: #253D4E;
+    margin-bottom: 30px;
+}
+.welcomeToNest .right .text p{
+    font-size: 16px;
+    color: #7E7E7E;
+    margin-bottom: 30px;
+}
+.welcomeToNest .right .text p:nth-child(3){
+    margin-bottom: 50px;
+}
+
+.welcomeToNest .right .slider{
+    position: relative;
+}
+
+.welcomeToNest .right .slider .container{
+    width: 2000px;
+}
+
+.welcomeToNest .right .slider .img{
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+.welcomeToNest .right .slider .icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F2F3F4;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.welcomeToNest .right .slider .icon:first-child{
+    left: 0;
+}
+.welcomeToNest .right .slider .icon:last-child{
+    right: 0;
+}
+
+.welcomeToNest .right .slider .icon .i{
+    color: #3BB77E;
+}

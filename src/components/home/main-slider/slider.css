@@ -1,0 +1,73 @@
+.main-slider{
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    margin: 50px 0;
+}
+
+.main-slider .slide{
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.main-slider .slide-1{
+    height: 540px;
+    width: 100%;
+    background-image: url("../../../assets/images/Tabpanel.png");
+    background-position: right;
+    background-size: cover;
+}
+
+.main-slider .i{
+    position: absolute;
+    top: 50%;
+    font-size: 40px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #F2F3F4;
+}
+.main-slider .slide-left{
+    left: 40px;
+}
+.main-slider .slide-right{
+    right: 40px;
+}
+
+.main-slider .slide h1{
+    font-size: 50px;
+    color: #253D4E;
+    margin-bottom: 30px;
+}
+.main-slider .slide span{
+    font-size: 25px;
+    color: #7E7E7E;
+}
+
+.main-slider .slide form{
+    width: fit-content;
+    position: relative;
+    margin-top: 30px;
+}
+
+.main-slider .slide form input{
+    outline: none;
+    border: none;
+    border-radius: 40px;
+}
+
+.main-slider .slide form input[type="text"]{
+    width: 450px;
+    height: 42px;
+    padding: 5px 150px 5px 20px;
+    font-size: 16px;
+}
+.main-slider .slide form input[type="submit"]{
+    width: 150px;
+    height: 42px;
+    position: absolute;
+    right: 0;
+    background: #3BB77E;
+    color: #FFF;
+    cursor: pointer;
+}

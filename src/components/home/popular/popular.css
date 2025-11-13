@@ -1,0 +1,147 @@
+.popular{
+    width: 100%;
+    overflow: hidden;
+    margin: 50px 0;
+}
+
+.popular .bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 40px 0;
+}
+
+.popular .bar h1{
+    font-size: 32px;
+    color: #253D4E;
+}
+
+.popular .bar ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.popular .bar ul a{
+    font-size: 16px;
+    color: #253D4E;
+}
+
+.popular .bar ul a:hover{
+    color: #3BB77E;
+    transition: .4s ease;
+}
+
+.popular .bar ul li:first-child a{
+    color: #3BB77E;
+}
+
+/* .popular .products{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-gap: 24px;
+    width: 100%;
+} */
+.popular .products{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.pop_product{
+    border: 1px solid #ECECEC;
+    border-radius: 7px;
+    width: 217.719px;
+    margin: 0 1% 24px 1%;
+}
+
+.pop_product:hover{
+    box-shadow: 0 0 10px #c9c5c5;
+    transition: .2s ease;
+}
+.pop_product .img{
+    display: block;
+    width: 100%;
+}
+.pop_product .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pop_product .text{
+    padding: 10px;
+}
+
+.pop_product .text>span:first-child{
+    font-size: 12px;
+    color: #ADADAD;
+}
+
+.pop_product .text h4{
+    width: 200px;
+    font-size: 16px;
+    color: #253D4E;
+    margin: 10px 0;
+}
+
+.pop_product .text .rate{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pop_product .text .rate .i{
+    color: gold;
+}
+
+.pop_product .text .rate>span{
+    color: #ADADAD;
+    font-size: 14px;
+}
+
+.pop_product .text .company{
+    font-size: 14px;
+    color: #B6B6B6;
+    margin-bottom: 24px;
+}
+.pop_product .text .company>span{
+    color: #3BB77E;
+}
+
+.pop_product .text .price_add{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pop_product .text .price_add p>span:first-child{
+    color: #3BB77E;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.pop_product .text .price_add p>span:last-child{
+    color: #ADADAD;
+    font-size: 14px;
+    text-decoration: line-through;
+}
+
+.pop_product .text .price_add .add{
+    color: #3BB77E;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #DEF9EC;
+    padding: 7px 12px;
+    border-radius: 4px;
+}
+
+.pop_product .text .price_add .add:hover{
+    opacity: .8;
+    transition: .2s ease;
+}
+
+.pop_product .text .price_add .add .i{
+    font-size: 18px;
+}
