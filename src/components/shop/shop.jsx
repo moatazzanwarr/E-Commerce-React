@@ -1,11 +1,10 @@
 // Imports
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./shop.css";
 import "./shopRespon.css";
 import Pop_product from "../home/popular/pop_product";
 import Deals from "../home/deals/deals";
 import FilterMenu from "./filterMenu";
-
 
 // Icons
 import icons from "../../assets/icons";
@@ -17,68 +16,72 @@ import categoryImg_3 from "../../assets/images/category-3.png";
 import categoryImg_4 from "../../assets/images/category-4.png";
 import categoryImg_5 from "../../assets/images/category-5.png";
 
+// import context
+import { ProductsContext } from "../../context/productsContext";
+
 const categorySrc = [
   {
     id: 1,
     src: categoryImg_1,
     title: "Milks & Dairies",
-    counter: 11
+    counter: 11,
   },
   {
     id: 2,
     src: categoryImg_2,
     title: "Clothing",
-    counter: 13
+    counter: 13,
   },
   {
     id: 3,
     src: categoryImg_3,
     title: "Pet Foods",
-    counter: 15
+    counter: 15,
   },
   {
     id: 4,
     src: categoryImg_4,
     title: "Baking material",
-    counter: 25
+    counter: 25,
   },
   {
     id: 5,
     src: categoryImg_5,
     title: "Fresh Fruit",
-    counter: 32
+    counter: 32,
   },
 ];
 
-
 function Shop() {
-  const [data, setData] = useState([]);
+  // useContext
+  const { products } = useContext(ProductsContext);
+
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   fetch("/products.json")
+  //     .then((res) => res.json())
+  //     .then((item) => {
+  //       setData(item.slice(0, 12));
+  //     })
+  //     .catch((error) => console.log(error));
+  // }, []);
+
+  const [newProducts, setNewProducts] = useState([]);
   useEffect(() => {
-    fetch("/products.json")
+    fetch("/newProducts.json")
       .then((res) => res.json())
       .then((item) => {
-        setData(item.slice(0, 12));
-      })
-      .catch((error) => console.log(error));
+        setNewProducts(item.slice(3, 6));
+      });
   }, []);
 
-  const [newProducts,setNewProducts] = useState([])
-  useEffect(()=>{
-    fetch("/newProducts.json")
-    .then(res=>res.json())
-    .then(item=>{
-      setNewProducts(item.slice(3,6))
-    })
-  },[])
-
-  const [openFilter,SetOpenFilter] = useState(false)
-  const filter = ()=>{
-    SetOpenFilter(!openFilter)
-  }
+  const [openFilter, SetOpenFilter] = useState(false);
+  const filter = () => {
+    SetOpenFilter(!openFilter);
+  };
 
   return (
     <section className="shop">
-
       <div className="mainContent">
         <aside>
           <div className="category">
@@ -97,11 +100,15 @@ function Shop() {
           <div className="fillByPrice">
             <h1>Fill by price</h1>
             <div className="range">
-                <input type="range" name="" id="" />
+              <input type="range" name="" id="" />
             </div>
             <div className="rangeValue">
-              <p>from: <span>$500</span></p>
-              <p>to: <span>$1000</span></p>
+              <p>
+                from: <span>$500</span>
+              </p>
+              <p>
+                to: <span>$1000</span>
+              </p>
             </div>
             <div className="color">
               <h4>color</h4>
@@ -134,7 +141,9 @@ function Shop() {
                 <label htmlFor="used">Used (45)</label>
               </div>
             </div>
-            <button><icons.FilterAltIcon className="i"/> Fillter</button>
+            <button>
+              <icons.FilterAltIcon className="i" /> Fillter
+            </button>
           </div>
 
           <div className="newProducts">
@@ -148,19 +157,17 @@ function Shop() {
                   <h4>{e.title}</h4>
                   <p>${e.price}</p>
                   <div className="rate">
-                    <icons.StarIcon className="i"/>
-                    ({e.rate})
+                    <icons.StarIcon className="i" />({e.rate})
                   </div>
                 </div>
               </div>
             ))}
           </div>
-
         </aside>
         <div className="container">
           <div className="bar">
             <div className="mobileFilter" onClick={filter}>
-              <icons.FilterAltIcon className="i"/>
+              <icons.FilterAltIcon className="i" />
             </div>
             <div>
               <div>
@@ -177,7 +184,7 @@ function Shop() {
             </div>
           </div>
           <div className="products">
-            {data.map((product) => (
+            {products.slice(0,12).map((product) => (
               <Pop_product
                 key={product.id}
                 id={product.id}
@@ -192,19 +199,23 @@ function Shop() {
             ))}
           </div>
           <div className="changeProducts">
-            <div><icons.ArrowBackIcon className="i"/></div>
+            <div>
+              <icons.ArrowBackIcon className="i" />
+            </div>
             <div>1</div>
             <div>2</div>
             <div>3</div>
             <span>. . .</span>
             <div>6</div>
-            <div><icons.ArrowForwardIcon className="i"/></div>
+            <div>
+              <icons.ArrowForwardIcon className="i" />
+            </div>
           </div>
         </div>
       </div>
-      <Deals/>
-      <div className={ openFilter ? "open mobileFilter" : "close mobileFilter"}>
-        <FilterMenu/>
+      <Deals />
+      <div className={openFilter ? "open mobileFilter" : "close mobileFilter"}>
+        <FilterMenu />
       </div>
     </section>
   );

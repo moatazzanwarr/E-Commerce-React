@@ -1,51 +1,31 @@
 // Imports
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import "./popular.css";
-import '../homeRespon.css'
+import "../homeRespon.css";
 import { NavLink } from "react-router-dom";
 import Pop_product from "./pop_product";
+// context
 
-
-
-
-
-
-
-
+import { ProductsContext } from "../../../context/productsContext";
 
 function Popular() {
-
   // Cart
-  const [cart, setCart] = useState(()=>{
+  const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("cart");
     return savedCart ? JSON.parse(savedCart) : [];
-  })
+  });
 
-  useEffect(()=>{
+  useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
-    localStorage.setItem("length", cart.length)
-  },[setCart])
+    localStorage.setItem("length", cart.length);
+  }, [setCart]);
 
-  const addToCart = (product)=>{
-    setCart([...cart, product])
-  }
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+  };
 
-
-  // product data
-  const [data,setData] = useState([])
-  useEffect(()=>{
-    fetch("/products.json")
-    .then(res=>res.json())
-    .then(jsonData=> setData(jsonData.slice(0,10)))
-    .catch(error=>console.log(error)
-    )
-  },[])
-
-  const fun = (title)=>{
-    console.log(title);
-    
-  }
-
+  // product data from context
+  const { products } = useContext(ProductsContext);
 
   return (
     <section className="popular">
@@ -76,22 +56,20 @@ function Popular() {
         </ul>
       </div>
       <div className="products">
-        {
-          data.map((item,i)=>(
-              <Pop_product
-              key={i}
-              src={item.src}
-              type={item.type}
-              title={item.title}
-              company={item.company}
-              rate="4.5"
-              price={item.price}
-              discount={item.discount}
-              id={item.id}
-              onAddToCart={addToCart}
-              />
-          ))
-        }
+        {products.slice(0,12).map((item, i) => (
+          <Pop_product
+            key={i}
+            src={item.src}
+            type={item.type}
+            title={item.title}
+            company={item.company}
+            rate="4.5"
+            price={item.price}
+            discount={item.discount}
+            id={item.id}
+            onAddToCart={addToCart}
+          />
+        ))}
       </div>
     </section>
   );
