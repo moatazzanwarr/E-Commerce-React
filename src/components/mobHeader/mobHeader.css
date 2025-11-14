@@ -56,12 +56,13 @@
 
 .mobileMenu{
     width: 100%;
-    background: #93c5dd;
+    background: #C5EAD9;
     position: absolute;
     z-index: 10;
     transform-origin: .4 ease;
     transform: translateY(-220%);
     display: none;
+
 }
 
 .mobileMenu>.ln{
@@ -71,9 +72,10 @@
     height: 50px;
 }
 .mobileMenu>.ln>a{
-    color: black;
+    color: #253D4E;
     display: flex;
     align-items: center;
+    font-weight: 900;
 }
 
 @keyframes openMenu{
