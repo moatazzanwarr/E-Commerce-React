@@ -1,37 +1,57 @@
 // Imports
-import React from 'react'
-import './mobHeader.css'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import "./mobHeader.css";
+import { Link } from "react-router-dom";
 
 // Icons
-import icons from '../../assets/icons'
+import icons from "../../assets/icons";
 
 // Images
-import Logo from '../../assets/images/Logo.png'
-
+import Logo from "../../assets/images/Logo.png";
 
 function MopHeader() {
-  const length = localStorage.getItem("length")
+  const length = localStorage.getItem("length");
+  const [status, setStatus] = useState(false);
   return (
-    <header className='mobHeader'>
-      <div className='menu'>
-        <icons.MenuIcon className='i'/>
-      </div>
-      <Link to="/" className='logo'>
-        <img src={Logo} alt="logo" />
-      </Link>
-      <div>
+    <>
+      <header className="mobHeader">
+        <div
+          className="menu"
+          onClick={() => (status ? setStatus(false) : setStatus(true))}
+        >
+          <icons.MenuIcon className="i" />
+        </div>
+        <Link to="/" className="logo">
+          <img src={Logo} alt="logo" />
+        </Link>
         <div>
-            <icons.FavoriteBorderIcon className='i'/>
+          <div>
+            <icons.FavoriteBorderIcon className="i" />
             <span>2</span>
-        </div>
-        <div>
-            <icons.ShoppingCartCheckoutIcon className='i'/>
+          </div>
+          <div>
+            <icons.ShoppingCartCheckoutIcon className="i" />
             <span>{length}</span>
+          </div>
+        </div>
+      </header>
+
+      <div className={status ? "mobileMenu openedMobileMenu" : "mobileMenu closedMobileMenu"} >
+        <div className="ln">
+          <Link to="/" >Home</Link>
+        </div>
+        <div className="ln">
+          <Link to="/about" >About</Link>
+        </div>
+        <div className="ln">
+          <Link to="/shop" >Shop</Link>
+        </div>
+        <div className="ln">
+          <Link to="/contact" >Contact</Link>
         </div>
       </div>
-    </header>
-  )
+    </>
+  );
 }
 
-export default MopHeader
+export default MopHeader;
