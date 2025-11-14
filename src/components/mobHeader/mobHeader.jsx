@@ -26,12 +26,11 @@ function MopHeader() {
         </Link>
         <div>
           <div>
-            <icons.FavoriteBorderIcon className="i" />
-            <span>2</span>
+            <Link to="/cart"><icons.ShoppingCartCheckoutIcon className="i" /></Link>
+            <span>{length}</span>
           </div>
           <div>
-            <icons.ShoppingCartCheckoutIcon className="i" />
-            <span>{length}</span>
+            <Link to="/createAccount"><icons.PersonOutlineIcon className="i" /></Link>
           </div>
         </div>
       </header>

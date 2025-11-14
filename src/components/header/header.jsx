@@ -45,12 +45,6 @@ function Header({ openCart }) {
               <icons.CachedIcon className="i" />
               <span>Compare</span>
             </li>
-            <li>
-              <Link to="">
-                <icons.FavoriteBorderIcon className="i" />
-                <span>Wishlist</span>
-              </Link>
-            </li>
             <li className="cart" onClick={openCart}>
               <Link to="/cart">
                 <icons.ShoppingCartCheckoutIcon className="i" />
@@ -59,8 +53,10 @@ function Header({ openCart }) {
               </Link>
             </li>
             <li>
-              <icons.PersonOutlineIcon className="i" />
-              <span>Account</span>
+              <Link to="/createAccount">
+                <icons.PersonOutlineIcon className="i" />
+                <span>Account</span>
+              </Link>
             </li>
           </ul>
         </div>
@@ -86,11 +82,7 @@ function Header({ openCart }) {
           </div>
 
           <div>
-            <select name="" id="">
-              <option value="home">Home</option>
-              <option value="home">Home</option>
-              <option value="home">Home</option>
-            </select>
+            <NavLink to="/">Home</NavLink>
           </div>
 
           <div>
@@ -99,14 +91,6 @@ function Header({ openCart }) {
 
           <div>
           <NavLink to="/shop">Shop</NavLink>
-          </div>
-
-          <div>
-            <select name="" id="">
-              <option value="vendors">Vendors</option>
-              <option value="vendors">Vendors</option>
-              <option value="vendors">Vendors</option>
-            </select>
           </div>
 
           <div>

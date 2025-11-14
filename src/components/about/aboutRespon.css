@@ -28,7 +28,6 @@
 
     .ourTeam {
         width: 90% !important;
-        border: 1px solid red;
     }
 
     .ourTeam>.container>.cards>.OurTeamCard {

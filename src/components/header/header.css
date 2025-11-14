@@ -89,7 +89,11 @@ header .bottom .center{
     width: 100%;
 }
 
-header .bottom .center input{
+header .bottom .center div{
+    width: 100%;
+}
+
+header .bottom .center div input{
     font-size: 14px;
     border: none;
     outline: none;

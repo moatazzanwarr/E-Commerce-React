@@ -20,8 +20,7 @@ function ProductView() {
     fetch("/products.json")
     .then(res=>res.json())
     .then(jsonData=>{
-      
-      const foundProduct = jsonData.find((item)=> item.id === parseInt(id))
+      const foundProduct = jsonData.find((item)=> item.id === parseInt(id));
       setProduct(foundProduct)
     })
     .catch(error=>console.log(error)
@@ -31,6 +30,9 @@ function ProductView() {
   if(!product){
     return <div>Prouduct Not Found</div>
   }
+
+  console.log(product);
+  
 
   return (
     <section className="productView">
