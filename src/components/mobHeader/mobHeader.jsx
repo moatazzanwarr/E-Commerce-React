@@ -1,5 +1,5 @@
 // Imports
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./mobHeader.css";
 import { Link } from "react-router-dom";
 
@@ -9,9 +9,13 @@ import icons from "../../assets/icons";
 // Images
 import Logo from "../../assets/images/Logo.png";
 
+// cart context
+import { CartContext } from "../../context/cartContext";
+
 function MopHeader() {
-  const length = localStorage.getItem("length");
   const [status, setStatus] = useState(false);
+
+  const { cart } = useContext(CartContext);
   return (
     <>
       <header className="mobHeader">
@@ -26,27 +30,35 @@ function MopHeader() {
         </Link>
         <div>
           <div>
-            <Link to="/cart"><icons.ShoppingCartCheckoutIcon className="i" /></Link>
-            <span>{length}</span>
+            <Link to="/cart">
+              <icons.ShoppingCartCheckoutIcon className="i" />
+            </Link>
+            <span>{cart.length}</span>
           </div>
           <div>
-            <Link to="/createAccount"><icons.PersonOutlineIcon className="i" /></Link>
+            <Link to="/createAccount">
+              <icons.PersonOutlineIcon className="i" />
+            </Link>
           </div>
         </div>
       </header>
 
-      <div className={status ? "mobileMenu openedMobileMenu" : "mobileMenu closedMobileMenu"} >
+      <div
+        className={
+          status ? "mobileMenu openedMobileMenu" : "mobileMenu closedMobileMenu"
+        }
+      >
         <div className="ln">
-          <Link to="/" >Home</Link>
+          <Link to="/">Home</Link>
         </div>
         <div className="ln">
-          <Link to="/about" >About</Link>
+          <Link to="/about">About</Link>
         </div>
         <div className="ln">
-          <Link to="/shop" >Shop</Link>
+          <Link to="/shop">Shop</Link>
         </div>
         <div className="ln">
-          <Link to="/contact" >Contact</Link>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </>

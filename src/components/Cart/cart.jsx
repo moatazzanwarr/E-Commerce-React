@@ -1,5 +1,5 @@
 // Imports
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./cart.css";
 import "./cartRespon.css";
 import CartProduct from "./cartProduct";
@@ -9,12 +9,14 @@ import { Link } from "react-router-dom";
 // Icons
 import icons from "../../assets/icons";
 
-const cartstorage = localStorage.getItem("cart");
-const cartStorageParse = JSON.parse(cartstorage);
+// context
+import { CartContext } from "../../context/cartContext";
 
 function Cart() {
   const [total, setTotal] = useState(50);
   const [estimate, setEstimate] = useState("Egypt");
+
+  const { cart, removeFromCart, clearCart } = useContext(CartContext);
 
   return (
     <section className="cart">
@@ -41,13 +43,15 @@ function Cart() {
         <h1>Your Cart</h1>
         <div>
           <p>
-            There are <span>{localStorage.getItem("length")} </span>products in
+            There are <span>{cart.length} </span>products in
             your cart
           </p>
-          <div>
-            <icons.DeleteIcon className="i" />
-            Clear Cart
-          </div>
+          {cart.length > 0 && (
+            <div onclick={()=> clearCart} >
+              <icons.DeleteIcon className="i" />
+              Clear Cart
+            </div>
+          )}
         </div>
 
         <div className="container-2">
@@ -74,27 +78,37 @@ function Cart() {
                 </li>
               </ul>
 
-              {cartStorageParse.map((item) => (
+              {cart.map((item) => (
                 <CartProduct
                   key={item.id}
                   src={item.src}
                   title={item.title}
                   rate={item.rate}
                   price={item.price}
+                  id={item.id}
+                  removeFromCart={removeFromCart}
                 />
               ))}
             </div>
 
             <div>
               <div className="btns">
-                <Link to="#"><icons.ArrowBackIcon className="i"/>Continue Shopping</Link>
-                <button><icons.CachedIcon className="i"/>Update Cart</button>
+                <Link to="#">
+                  <icons.ArrowBackIcon className="i" />
+                  Continue Shopping
+                </Link>
+                <button>
+                  <icons.CachedIcon className="i" />
+                  Update Cart
+                </button>
               </div>
 
               <div className="bottom">
                 <div className="left">
                   <h3>Calculate Shipping</h3>
-                  <p>Flat rate:<span>5%</span></p>
+                  <p>
+                    Flat rate:<span>5%</span>
+                  </p>
                   <select name="" id="">
                     <option value="egypt">Egypt</option>
                     <option value="egypt">Egypt</option>
@@ -102,16 +116,19 @@ function Cart() {
                     <option value="egypt">Egypt</option>
                   </select>
                   <div>
-                    <input type="text" placeholder="State / Country"/>
-                    <input type="text" placeholder="PostCode / ZIP"/>
+                    <input type="text" placeholder="State / Country" />
+                    <input type="text" placeholder="PostCode / ZIP" />
                   </div>
                 </div>
                 <div className="right">
                   <h3>Apply Coupon</h3>
                   <p>Using A Promo Code?</p>
                   <div>
-                    <input type="text" placeholder="Enter Your Coupon"/>
-                    <button><icons.LocalMallIcon className="i"/>Apply</button>
+                    <input type="text" placeholder="Enter Your Coupon" />
+                    <button>
+                      <icons.LocalMallIcon className="i" />
+                      Apply
+                    </button>
                   </div>
                 </div>
               </div>
@@ -137,14 +154,13 @@ function Cart() {
               </div>
             </div>
             <div className="btn">
-              <Link to="/checkOut">Proceed To CheckOut <icons.LogoutIcon className="i"/></Link>
+              <Link to="/checkOut">
+                Proceed To CheckOut <icons.LogoutIcon className="i" />
+              </Link>
             </div>
           </div>
         </div>
-
       </section>
-
-      
     </section>
   );
 }

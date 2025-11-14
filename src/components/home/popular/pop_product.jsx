@@ -13,13 +13,13 @@ function Pop_product({
   rate,
   price,
   discount,
-  onAddToCart,
   id,
-
+  addToCart,
+  product
 }) {
 
   return (
-    <div className="pop_product" onClick={()=> console.log(id)}>
+    <div className="pop_product">
       <Link to={`/productView/${id}`} className="img">
         <img src={src} alt="" />
       </Link>
@@ -38,7 +38,7 @@ function Pop_product({
             <span>${price}</span>
             <span>${discount}</span>
           </p>
-          <div className="add" onClick={onAddToCart}>
+          <div className="add" onClick={()=> addToCart(product)}>
             <icons.ShoppingCartCheckoutIcon className="i" /> <span>Add</span>
           </div>
         </div>

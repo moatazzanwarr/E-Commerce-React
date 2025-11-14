@@ -1,5 +1,5 @@
 // Imports
-import React from "react";
+import React, { useContext } from "react";
 import "./header.css";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../assets/images/Logo.png";
@@ -7,14 +7,15 @@ import Logo from "../../assets/images/Logo.png";
 // Icons
 import icons from "../../assets/icons";
 
-// Cart
+// Cart context
+
+import { CartContext } from "../../context/cartContext";
 
 function Header({ openCart }) {
-  const cartLength = localStorage.getItem("length");
+  const { cart } = useContext(CartContext);
 
   return (
     <header className="headerPC">
-
       <div class="bottom">
         <div class="left">
           <Link to="/">
@@ -49,7 +50,7 @@ function Header({ openCart }) {
               <Link to="/cart">
                 <icons.ShoppingCartCheckoutIcon className="i" />
                 <span>Cart</span>
-                <span className="cartCounter">{cartLength}</span>
+                <span className="cartCounter">{cart.length}</span>
               </Link>
             </li>
             <li>
@@ -90,7 +91,7 @@ function Header({ openCart }) {
           </div>
 
           <div>
-          <NavLink to="/shop">Shop</NavLink>
+            <NavLink to="/shop">Shop</NavLink>
           </div>
 
           <div>

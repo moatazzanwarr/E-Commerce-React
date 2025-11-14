@@ -18,6 +18,7 @@ import categoryImg_5 from "../../assets/images/category-5.png";
 
 // import context
 import { ProductsContext } from "../../context/productsContext";
+import { CartContext } from "../../context/cartContext";
 
 const categorySrc = [
   {
@@ -55,16 +56,7 @@ const categorySrc = [
 function Shop() {
   // useContext
   const { products } = useContext(ProductsContext);
-
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   fetch("/products.json")
-  //     .then((res) => res.json())
-  //     .then((item) => {
-  //       setData(item.slice(0, 12));
-  //     })
-  //     .catch((error) => console.log(error));
-  // }, []);
+  const { addToCart } = useContext(CartContext);
 
   const [newProducts, setNewProducts] = useState([]);
   useEffect(() => {
@@ -184,7 +176,7 @@ function Shop() {
             </div>
           </div>
           <div className="products">
-            {products.slice(0,12).map((product) => (
+            {products.slice(0, 12).map((product) => (
               <Pop_product
                 key={product.id}
                 id={product.id}
@@ -195,6 +187,8 @@ function Shop() {
                 company={product.company}
                 price={product.price}
                 discount={product.discount}
+                addToCart={addToCart}
+                product={product}
               />
             ))}
           </div>

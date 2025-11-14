@@ -5,13 +5,12 @@ import "./cart.css";
 // Icons
 import icons from "../../assets/icons";
 
-function CartProduct({ src, title, rate, price }) {
+function CartProduct({ src, title, rate, price, id, removeFromCart }) {
   const [cart, setCart] = useState([]);
   const curentArray = localStorage.getItem("cart");
   const curentArrayParse = JSON.parse(curentArray);
   useEffect(() => {
     setCart(curentArrayParse);
-    return console.log(cart);
   }, []);
 
   const [count, setCount] = useState(1);
@@ -44,7 +43,7 @@ function CartProduct({ src, title, rate, price }) {
       <li>{parseInt(price * count)}</li>
 
       <li>
-        <icons.DeleteIcon className="i" />
+        <icons.DeleteIcon className="i" onClick={() => removeFromCart(id)}/>
       </li>
     </ul>
   );

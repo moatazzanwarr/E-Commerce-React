@@ -7,6 +7,7 @@ import Pop_product from "./pop_product";
 // context
 
 import { ProductsContext } from "../../../context/productsContext";
+import { CartContext } from "../../../context/cartContext";
 
 function Popular() {
   // Cart
@@ -20,12 +21,9 @@ function Popular() {
     localStorage.setItem("length", cart.length);
   }, [setCart]);
 
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-  };
-
   // product data from context
   const { products } = useContext(ProductsContext);
+  const { addToCart } = useContext(CartContext);
 
   return (
     <section className="popular">
@@ -56,7 +54,7 @@ function Popular() {
         </ul>
       </div>
       <div className="products">
-        {products.slice(0,12).map((item, i) => (
+        {products.slice(0, 12).map((item, i) => (
           <Pop_product
             key={i}
             src={item.src}
@@ -67,7 +65,8 @@ function Popular() {
             price={item.price}
             discount={item.discount}
             id={item.id}
-            onAddToCart={addToCart}
+            addToCart={addToCart}
+            product={item}
           />
         ))}
       </div>
