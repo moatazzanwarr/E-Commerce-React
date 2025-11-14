@@ -50,6 +50,7 @@ const categorySrc = [
   },
 ];
 
+
 function Shop() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -179,6 +180,7 @@ function Shop() {
             {data.map((product) => (
               <Pop_product
                 key={product.id}
+                id={product.id}
                 src={product.src}
                 type={product.type}
                 title={product.title}
