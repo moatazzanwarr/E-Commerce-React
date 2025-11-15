@@ -47,7 +47,7 @@ function Cart() {
             your cart
           </p>
           {cart.length > 0 && (
-            <div onclick={()=> clearCart} >
+            <div onClick={()=> clearCart()} >
               <icons.DeleteIcon className="i" />
               Clear Cart
             </div>
@@ -93,7 +93,7 @@ function Cart() {
 
             <div>
               <div className="btns">
-                <Link to="#">
+                <Link to="/shop">
                   <icons.ArrowBackIcon className="i" />
                   Continue Shopping
                 </Link>

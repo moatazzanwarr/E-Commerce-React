@@ -19,6 +19,7 @@ import categoryImg_5 from "../../assets/images/category-5.png";
 // import context
 import { ProductsContext } from "../../context/productsContext";
 import { CartContext } from "../../context/cartContext";
+import { FilterProductsContext } from "../../context/filterProductsContext";
 
 const categorySrc = [
   {
@@ -26,37 +27,46 @@ const categorySrc = [
     src: categoryImg_1,
     title: "Milks & Dairies",
     counter: 11,
+    Category: "Milks & Dairies",
   },
   {
     id: 2,
     src: categoryImg_2,
     title: "Clothing",
     counter: 13,
+    Category: "Clothing",
   },
   {
     id: 3,
     src: categoryImg_3,
     title: "Pet Foods",
     counter: 15,
+    Category: "Pet Foods",
   },
   {
     id: 4,
     src: categoryImg_4,
     title: "Baking material",
     counter: 25,
+    Category: "Baking material",
   },
   {
     id: 5,
     src: categoryImg_5,
     title: "Fresh Fruit",
     counter: 32,
+    Category: "Fresh Fruit",
   },
 ];
 
 function Shop() {
+  const [isFiltered, setIsFiltered] = useState(true);
   // useContext
   const { products } = useContext(ProductsContext);
   const { addToCart } = useContext(CartContext);
+  const { filterByCategory, filteredProducts } = useContext(
+    FilterProductsContext
+  );
 
   const [newProducts, setNewProducts] = useState([]);
   useEffect(() => {
@@ -79,7 +89,7 @@ function Shop() {
           <div className="category">
             <h1>Category</h1>
             {categorySrc.map((e, i) => (
-              <div key={e.id}>
+              <div key={e.id} onClick={() => {filterByCategory(e.Category) ; setIsFiltered(false)}}>
                 <div className="img">
                   <img src={e.src} alt="" />
                 </div>
@@ -176,21 +186,37 @@ function Shop() {
             </div>
           </div>
           <div className="products">
-            {products.slice(0, 12).map((product) => (
-              <Pop_product
-                key={product.id}
-                id={product.id}
-                src={product.src}
-                type={product.type}
-                title={product.title}
-                rate={product.rate}
-                company={product.company}
-                price={product.price}
-                discount={product.discount}
-                addToCart={addToCart}
-                product={product}
-              />
-            ))}
+            {isFiltered
+              ? products.map((product) => (
+                  <Pop_product
+                    key={product.id}
+                    id={product.id}
+                    src={product.src}
+                    type={product.type}
+                    title={product.title}
+                    rate={product.rate}
+                    company={product.company}
+                    price={product.price}
+                    discount={product.discount}
+                    addToCart={addToCart}
+                    product={product}
+                  />
+                ))
+              : filteredProducts.map((product) => (
+                  <Pop_product
+                    key={product.id}
+                    id={product.id}
+                    src={product.src}
+                    type={product.type}
+                    title={product.title}
+                    rate={product.rate}
+                    company={product.company}
+                    price={product.price}
+                    discount={product.discount}
+                    addToCart={addToCart}
+                    product={product}
+                  />
+                ))}
           </div>
           <div className="changeProducts">
             <div>
@@ -209,7 +235,7 @@ function Shop() {
       </div>
       <Deals />
       <div className={openFilter ? "open mobileFilter" : "close mobileFilter"}>
-        <FilterMenu />
+        <FilterMenu isFiltered={isFiltered} setIsFiltered={setIsFiltered}/>
       </div>
     </section>
   );
