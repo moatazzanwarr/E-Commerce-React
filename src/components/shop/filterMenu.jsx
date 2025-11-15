@@ -1,11 +1,9 @@
 // Imports
 import React, { useState, useContext } from "react";
 
-// Icons
-import icons from "../../assets/icons";
-
 // import context
 import { FilterProductsContext } from "../../context/filterProductsContext";
+import { ProductsContext } from "../../context/productsContext";
 
 // Images
 import categoryImg_1 from "../../assets/images/category-1.png";
@@ -13,6 +11,9 @@ import categoryImg_2 from "../../assets/images/category-2.png";
 import categoryImg_3 from "../../assets/images/category-3.png";
 import categoryImg_4 from "../../assets/images/category-4.png";
 import categoryImg_5 from "../../assets/images/category-5.png";
+
+// import css
+import "./filterMenu.css";
 
 const categorySrc = [
   {
@@ -52,9 +53,10 @@ const categorySrc = [
   },
 ];
 
+function FilterMenu({ setIsFiltered }) {
+  const { filterByCategory } = useContext(FilterProductsContext);
+  const { products } = useContext(ProductsContext);
 
-function FilterMenu({setIsFiltered}) {
-  const {filterByCategory} = useContext(FilterProductsContext)
   return (
     <>
       <div className="categoryInMobile">
@@ -71,7 +73,7 @@ function FilterMenu({setIsFiltered}) {
               <img src={e.src} alt="" />
             </div>
             <h6>{e.title}</h6>
-            <span className="counter">{e.counter}</span>
+            {/* <span className="counter">{e.counter}</span> */}
           </div>
         ))}
       </div>

@@ -464,22 +464,8 @@
 
 .open{
   display: block;
-  bottom: 0;
+
 }
 .close{
   display: none;
-  bottom: -500px;
-}
-
-
-.shop>.mobileFilter .categoryInMobile{
-  padding: 30px;
-  width: 100%;
-  height: 500px;
-  background: #FFF;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 100;
-  transition: .4s ease;
 }
