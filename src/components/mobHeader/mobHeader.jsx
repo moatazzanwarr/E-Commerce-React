@@ -15,7 +15,7 @@ import { CartContext } from "../../context/cartContext";
 function MopHeader() {
   const [status, setStatus] = useState(false);
 
-  const { cart } = useContext(CartContext);
+  const { cartQty } = useContext(CartContext);
   return (
     <>
       <header className="mobHeader">
@@ -33,7 +33,7 @@ function MopHeader() {
             <Link to="/cart">
               <icons.ShoppingCartCheckoutIcon className="i" />
             </Link>
-            <span>{cart.length}</span>
+            <span>{cartQty}</span>
           </div>
           <div>
             <Link to="/createAccount">
