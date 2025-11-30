@@ -16,7 +16,7 @@ function Cart() {
   const [total, setTotal] = useState(50);
   const [estimate, setEstimate] = useState("Egypt");
 
-  const { cart, removeFromCart, clearCart } = useContext(CartContext);
+  const { cart, removeFromCart, clearCart, totalPrice } = useContext(CartContext);
 
   return (
     <section className="cart">
@@ -43,11 +43,10 @@ function Cart() {
         <h1>Your Cart</h1>
         <div>
           <p>
-            There are <span>{cart.length} </span>products in
-            your cart
+            There are <span>{cart.length} </span>products in your cart
           </p>
           {cart.length > 0 && (
-            <div onClick={()=> clearCart()} >
+            <div onClick={() => clearCart()}>
               <icons.DeleteIcon className="i" />
               Clear Cart
             </div>
@@ -138,7 +137,12 @@ function Cart() {
             <div className="data">
               <div>
                 <span>Subtotal</span>
-                <span className="total">${total}</span>
+                {/* <span className="total">
+                  $
+                  {cart.reduce((total, item) => {
+                    return total + item.price * item.qty;
+                  }, 0)}
+                </span> */}
               </div>
               <div>
                 <span>Shipping</span>
@@ -150,7 +154,10 @@ function Cart() {
               </div>
               <div>
                 <span>Total</span>
-                <span className="total">${total}</span>
+                <span className="total">
+                  $
+                  {totalPrice}
+                </span>
               </div>
             </div>
             <div className="btn">
