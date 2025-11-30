@@ -12,7 +12,7 @@ import icons from "../../assets/icons";
 import { CartContext } from "../../context/cartContext";
 
 function Header({ openCart }) {
-  const { cart } = useContext(CartContext);
+  const { cartQty } = useContext(CartContext);
 
   return (
     <header className="headerPC">
@@ -50,7 +50,7 @@ function Header({ openCart }) {
               <Link to="/cart">
                 <icons.ShoppingCartCheckoutIcon className="i" />
                 <span>Cart</span>
-                <span className="cartCounter">{cart.length}</span>
+                <span className="cartCounter">{cartQty}</span>
               </Link>
             </li>
             <li>

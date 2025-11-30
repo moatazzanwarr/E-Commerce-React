@@ -6,9 +6,9 @@
         display: none !important;
 
     }
-    .Categories .cards{
+    /* .Categories .cards{
         display: none !important;
-    }
+    } */
     .Categories .banners{
         grid-template-columns: repeat(2,1fr) !important;
     }

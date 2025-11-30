@@ -12,7 +12,7 @@ import cart_6 from "../../../assets/images/cart-6.png";
 import cart_7 from "../../../assets/images/cart-7.png";
 import cart_8 from "../../../assets/images/cart-8.png";
 import cart_9 from "../../../assets/images/cart-9.png";
-import cart_10 from '../../../assets/images/cart-10.png';
+import cart_10 from "../../../assets/images/cart-10.png";
 
 import Banner from "./banner";
 import banner_bg_1 from "../../../assets/images/banner-1.png.png";
@@ -23,7 +23,10 @@ import { NavLink } from "react-router-dom";
 // Icons
 import icons from "../../../assets/icons";
 
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
 
 const cardData = {
   src: [
@@ -55,32 +58,51 @@ const cardData = {
 function Categories() {
   return (
     <section className="Categories">
-
       <div className="bar">
         <div className="left">
           <h1>Featured Categories</h1>
           <ul>
-            <li><NavLink to="#">Cake & Milk</NavLink></li>
-            <li><NavLink to="#">Coffes & Teas</NavLink></li>
-            <li><NavLink to="#">Pet Foods</NavLink></li>
-            <li><NavLink to="#">Vegetables</NavLink></li>
+            <li>
+              <NavLink to="#">Cake & Milk</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">Coffes & Teas</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">Pet Foods</NavLink>
+            </li>
+            <li>
+              <NavLink to="#">Vegetables</NavLink>
+            </li>
           </ul>
         </div>
         <div className="right">
-          <icons.ArrowBackIcon className="i"/>
-          <icons.ArrowForwardIcon className="i"/>
+          <icons.ArrowBackIcon className="i" />
+          <icons.ArrowForwardIcon className="i" />
         </div>
       </div>
 
       <div className="cards">
-        {cardData.src.map((src, i) => (
-          <Card
-            key={src}
-            src={cardData.src[i]}
-            title={cardData.titels[i]}
-            number="26"
-          />
-        ))}
+        <Swiper
+          spaceBetween={10}
+          slidesPerView={2.5}
+          breakpoints={{
+            480: { slidesPerView: 1.2, spaceBetween: 10 },
+            768: { slidesPerView: 3, spaceBetween: 20 },
+            1200: { slidesPerView: 7, spaceBetween: 30 },
+          }}
+        >
+          {cardData.src.map((src, i) => (
+            <SwiperSlide>
+              <Card
+                key={src}
+                src={cardData.src[i]}
+                title={cardData.titels[i]}
+                number="26"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
       <div className="banners">
         <Banner
@@ -91,10 +113,7 @@ function Categories() {
           src={banner_bg_2}
           title="Make your Breakfast Healthy and Easy"
         />
-        <Banner
-          src={banner_bg_3}
-          title="The best Organic Products Online"
-        />
+        <Banner src={banner_bg_3} title="The best Organic Products Online" />
       </div>
     </section>
   );
