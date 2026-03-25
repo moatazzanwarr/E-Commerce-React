@@ -1,5 +1,5 @@
 // Imports
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./slider.css";
 
 // Icons
@@ -20,10 +20,6 @@ const slides = [
 
 function Slider() {
   const [slideNumber, setSlideNumber] = useState(1);
-
-  const next = () => {
-    return setSlideNumber((prev) => (prev === 1 ? prev + 1 : prev - 1));
-  };
 
   function toRight() {
     if (slideNumber === 1) {
