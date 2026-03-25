@@ -3,7 +3,7 @@ import React, { useEffect, useState, useContext } from "react";
 import "./popular.css";
 import "../homeRespon.css";
 import { NavLink } from "react-router-dom";
-import Pop_product from "./pop_product";
+import PopProduct from "./pop_product.jsx";
 // context
 
 import { ProductsContext } from "../../../context/productsContext";
@@ -55,7 +55,7 @@ function Popular() {
       </div>
       <div className="products">
         {products.slice(0, 12).map((item, i) => (
-          <Pop_product
+          <PopProduct
             key={i}
             src={item.src}
             type={item.type}

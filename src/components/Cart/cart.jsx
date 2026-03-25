@@ -13,10 +13,8 @@ import icons from "../../assets/icons";
 import { CartContext } from "../../context/cartContext";
 
 function Cart() {
-  const [total, setTotal] = useState(50);
-  const [estimate, setEstimate] = useState("Egypt");
-
-  const { cart, removeFromCart, clearCart, totalPrice } = useContext(CartContext);
+  const { cart, removeFromCart, clearCart, totalPrice } =
+    useContext(CartContext);
 
   return (
     <section className="cart">
@@ -150,14 +148,11 @@ function Cart() {
               </div>
               <div>
                 <span>Estimate for</span>
-                <span>{estimate}</span>
+                {/* <span>{estimate}</span> */}
               </div>
               <div>
                 <span>Total</span>
-                <span className="total">
-                  $
-                  {totalPrice}
-                </span>
+                <span className="total">${totalPrice}</span>
               </div>
             </div>
             <div className="btn">

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Icons
 import icons from "../../../assets/icons";
 
-function Pop_product({
+function PopProduct({
   src,
   type,
   title,
@@ -15,9 +15,8 @@ function Pop_product({
   discount,
   id,
   addToCart,
-  product
+  product,
 }) {
-
   return (
     <div className="pop_product">
       <Link to={`/productView/${id}`} className="img">
@@ -38,7 +37,7 @@ function Pop_product({
             <span>${price}</span>
             <span>${discount}</span>
           </p>
-          <div className="add" onClick={()=> addToCart(product)}>
+          <div className="add" onClick={() => addToCart(product)}>
             <icons.ShoppingCartCheckoutIcon className="i" /> <span>Add</span>
           </div>
         </div>
@@ -47,4 +46,4 @@ function Pop_product({
   );
 }
 
-export default Pop_product;
+export default PopProduct;
