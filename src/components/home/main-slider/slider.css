@@ -1,91 +1,132 @@
-.main{
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-    margin: 50px 0;
+.main {
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  margin: 50px 0;
 }
 
-
-.container-slides{
-    overflow: hidden;
-    max-width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+.container-slides {
+  overflow: hidden;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
-.main .slide{
-    display: flex;
-    align-items: center;
-    padding-left: 80px;
-    height: 540px;
-    width: 100%;
-    background-image: url("../../../assets/images/Tabpanel.png");
-    background-position: right;
-    background-size: cover;
-    transition: .5s all ease-in-out;
+.main .slide {
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  height: 540px;
+  width: 100%;
+  background-image: url("../../../assets/images/Tabpanel.png");
+  background-position: right;
+  background-size: cover;
+  transition: 0.5s all ease-in-out;
 }
 
 .active {
-    max-width: 100% !important;
-    opacity: 100;
+  max-width: 100% !important;
+  opacity: 100;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
-.notActive{
-    opacity: 0;
-    max-width: 0 !important;
-    position: absolute;
+.notActive {
+  opacity: 0;
+  max-width: 0 !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.main .i{
-    position: absolute;
-    top: 50%;
-    font-size: 40px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #F2F3F4;
+.main .i {
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #f2f3f4;
+  z-index: 2;
 }
-.main .slide-left{
-    left: 40px;
+.main .slide-left {
+  left: 40px;
 }
-.main .slide-right{
-    right: 40px;
-}
-
-.main .slide h1{
-    font-size: 50px;
-    color: #253D4E;
-    margin-bottom: 30px;
-}
-.main .slide span{
-    font-size: 25px;
-    color: #7E7E7E;
+.main .slide-right {
+  right: 40px;
 }
 
-.main .slide form{
-    width: fit-content;
-    position: relative;
-    margin-top: 30px;
+.main .slide h1 {
+  font-size: 50px;
+  color: #253d4e;
+  margin-bottom: 30px;
+}
+.main .slide span {
+  font-size: 25px;
+  color: #7e7e7e;
 }
 
-.main .slide form input{
-    outline: none;
-    border: none;
-    border-radius: 40px;
+.main .slide form {
+  width: fit-content;
+  position: relative;
+  margin-top: 30px;
 }
 
-.main .slide form input[type="text"]{
-    width: 450px;
-    height: 42px;
-    padding: 5px 150px 5px 20px;
-    font-size: 16px;
+.main .slide form input {
+  outline: none;
+  border: none;
+  border-radius: 40px;
 }
-.main .slide form input[type="submit"]{
-    width: 150px;
-    height: 42px;
-    position: absolute;
-    right: 0;
-    background: #3BB77E;
-    color: #FFF;
-    cursor: pointer;
+
+.main .slide form input[type="text"] {
+  width: 450px;
+  height: 42px;
+  padding: 5px 150px 5px 20px;
+  font-size: 16px;
+}
+.main .slide form input[type="submit"] {
+  width: 150px;
+  height: 42px;
+  position: absolute;
+  right: 0;
+  background: #3bb77e;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .main .slide {
+    height: auto;
+    padding: 10px 20px;
+
+    justify-content: center;
+    text-align: center;
+  }
+  .main .slide h1 {
+    font-size: 30px;
+  }
+  .main .slide span {
+    font-size: 18px;
+  }
+
+  .main span i {
+    opacity: 0.4;
+  }
+
+  .main .slide-left {
+    left: 12px;
+  }
+  .main .slide-right {
+    right: 12px;
+  }
+
+  /* ################## */
+  .main .slide form input[type="text"] {
+    width: 300px;
+    padding: 5px 20px;
+    font-size: 12px;
+  }
 }

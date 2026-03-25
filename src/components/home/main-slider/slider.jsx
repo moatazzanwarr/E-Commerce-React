@@ -21,9 +21,20 @@ const slides = [
 function Slider() {
   const [slideNumber, setSlideNumber] = useState(1);
 
-      const next = ()=>{
-        return setSlideNumber(prev => prev === 1 ? prev + 1 : prev - 1 )
-      }
+  const next = () => {
+    return setSlideNumber((prev) => (prev === 1 ? prev + 1 : prev - 1));
+  };
+
+  function toRight() {
+    if (slideNumber === 1) {
+      setSlideNumber(2);
+    }
+  }
+  function toLeft() {
+    if (slideNumber === 2) {
+      setSlideNumber(1);
+    }
+  }
 
   return (
     <div className="main">
@@ -49,10 +60,10 @@ function Slider() {
         })}
       </div>
 
-      <span onClick={()=> next()}>
+      <span onClick={() => toLeft()}>
         <icons.ArrowCircleLeftIcon className="slide-left i" />
       </span>
-      <span onClick={()=> next()}>
+      <span onClick={() => toRight()}>
         <icons.ArrowCircleRightIcon className="slide-right i" />
       </span>
     </div>
